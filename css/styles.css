@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* { 
+    box-sizing: border-box; 
+}
 
 @font-face {
     font-family: 'Geist';
@@ -28,15 +30,47 @@ body {
     margin: 0;
     font-size:calc(8px + 1.5vw);
     line-height: calc(8px + 1.5vw);
+    cursor: none; /* Hide the default cursor */
 }
 
 /* */
+
+a { color: inherit; }
 
 img.img-full {
     width: calc(100% + 48px);
     height: calc(100% + 48px);
     margin: -24px;
     object-fit: cover;
+}
+
+/* Cursor */
+
+#cursor-andrea,
+#cursor-animation {
+    position: absolute;
+    z-index: 1000;
+}
+
+#cursor-animation {
+   width: 128px;
+   height: 128px;
+   transform: translate(-50%, -50%);
+}
+
+#cursor-animation img {
+    width: 100%;
+    height: auto;
+ }
+
+
+#cursor, #curosor-link {
+    position: fixed; /* Fixed to follow the mouse */
+    pointer-events: none; /* Prevent interfering with mouse events */
+    width: 32px; /* Adjust the size to your SVG dimensions */
+    height: 32px;
+    transform: translate(-50%, -50%); /* Center the cursor */
+    z-index: 1001; /* Ensure it stays above other elements */
 }
 
 /* Button */
@@ -105,9 +139,11 @@ h1 {
     font-family: 'Tiempos Fine'; 
     font-weight: 300; 
     font-style: normal;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1.05em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    letter-spacing: 0.01em;
+
 }
 
 h2 {
@@ -137,7 +173,7 @@ p.intro.dark {
 }
 
 .card {
-    border-radius: 24px;
+    border-radius: 16px;
     padding: 24px;
     background-color: #ffffff;
     color: #1f1f1f;
@@ -147,10 +183,6 @@ p.intro.dark {
     background-position: center top;
     transition: all 0.2s ease-in-out;
     transform: scale(1);
-}
-
-.card:hover {
-    transform: scale(1.02);
 }
 
 .card .link-full {
@@ -180,6 +212,7 @@ p.intro.dark {
     right: 24px;
     bottom: 24px;
     left: 24px;
+    z-index: 9;
 }
 
 .gradient {
@@ -198,7 +231,7 @@ p.intro.dark {
 /* List */
 
 ul.list {
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
 }
 
@@ -214,9 +247,10 @@ ul.list li::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: auto;
     bottom: 0;
     left: 0;
+    width: 1em;
     background-image: url(../img/arrow-right-light.svg);
     background-repeat: no-repeat;
     background-position: left center;
@@ -340,6 +374,7 @@ ul.list li::before {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 16px;
+    padding-bottom: 400px;
 }
 
 .brand {
@@ -365,8 +400,9 @@ ul.list li::before {
     font-family: 'Tiempos Fine'; 
     font-weight: 300; 
     font-style: normal;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.2em;
+    letter-spacing: 0.01em;
 }
 
 
@@ -437,6 +473,10 @@ ul.list li::before {
     body {
         font-size: calc(8px + 0.3vw);
         line-height: calc(8px + 0.3vw);
+    }
+
+    h1 {
+        font-size: 3em;
     }
 
     .menu {
