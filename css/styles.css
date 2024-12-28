@@ -44,6 +44,35 @@ img.img-full {
     object-fit: cover;
 }
 
+/* Page */
+
+.page {
+    width: calc(75%);
+    margin-left: calc(25%);
+    border-radius: 16px;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 24px;
+    min-height: calc(100dvh - 32px);
+}
+
+.page.full {
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
+}
+
+/* Transitions */
+
+.page-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition.fade-in {
+    opacity: 1;
+}
+
 /* Cursor */
 
 #cursor-andrea,
@@ -132,7 +161,7 @@ p, h1, h2 {
     margin: 0;
     padding: 0;
     font-weight: normal;
-    line-height: 1.1em;
+    line-height: 1.2em;
 }
 
 h1 {
@@ -173,6 +202,7 @@ p.intro.dark {
 }
 
 .card {
+    opacity: 0;
     border-radius: 16px;
     padding: 24px;
     background-color: #ffffff;
@@ -181,8 +211,6 @@ p.intro.dark {
     overflow: hidden;
     background-size: cover;
     background-position: center top;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1);
 }
 
 .card .link-full {
@@ -253,8 +281,14 @@ ul.list li::before {
     width: 1em;
     background-image: url(../img/arrow-right-light.svg);
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: left 0.33em;
 } 
+
+ul.list li span {
+    display: block;
+    opacity: 0.5;
+    margin-bottom: 0.25em;
+}
 
 
 /* Stories */
@@ -405,12 +439,16 @@ ul.list li::before {
     letter-spacing: 0.01em;
 }
 
-
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(24, 50vw);
+    grid-template-rows: repeat(25, 50vw);
     grid-gap: 16px;
+}
+
+.grid-item-3c-2r {
+    grid-column-end: span 3;
+    grid-row-end: span 2;
 }
 
 .grid-item-2c-4r {
@@ -425,7 +463,7 @@ ul.list li::before {
 
 .grid-item-2c-2r {
     grid-column-end: span 1;
-    grid-row-end: span 2;
+    grid-row-end: span 3;
 }
 
 .grid-item-1c-3r {
@@ -437,10 +475,6 @@ ul.list li::before {
     grid-column-end: span 1;
     grid-row-end: span 2;
 }
-
-
-
-
 
 /* Tablet */
 
@@ -494,6 +528,14 @@ ul.list li::before {
         grid-template-rows: repeat(10, calc((100dvh / 4) - 20px));
     }
 
+    .grid-page {
+        width: calc(75%);
+        margin-left: calc(25%);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, calc(100dvh - 32px));
+        height: calc(100dvh - 32px);
+        background-color: red;
+    }
 
 }
 
@@ -510,5 +552,13 @@ ul.list li::before {
 @media screen and (min-height: 1024px) and (min-width: 1440px) {
     .grid {
         grid-template-rows: repeat(10, 236px);
+    }
+}
+
+/* Touch Devices */
+
+@media (pointer: coarse) {
+    #cursor {
+      display: none;
     }
 }

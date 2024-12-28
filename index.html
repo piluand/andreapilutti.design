@@ -6,8 +6,10 @@
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body>
+<body class="page-transition">
     <div id="cursor">
         <img id="standard" src="img/cursor.svg">
         <img id="link" src="img/pointer.svg">
@@ -48,7 +50,7 @@
             <div class="card grid-item-1c-2r bg-accent">
                 <p class="intro">Experience</p>
                 <div class="gradient">
-                    <a class="button light load-page" href="test.html">Read more</a>
+                    <a class="button light" href="page.html">Read more</a>
                 </div>
                 <div class="content">
                     <ul class="list">
@@ -63,19 +65,19 @@
                 </div>
             </div>
             <div class="card grid-item-1c-3r" id="nespresso">
-                <a class="link-full" href="#"></a>
+                <!-- <a class="link-full" href="#"></a> -->
                 <p class="intro">Work - Nespresso</p>
                 <h2>I have founded and scaled the Product Design team at Nespresso, laying the groundwork for a digital transformation</h2>
                 <span class="tag dark">Story coming soon</span>
             </div>
             <div class="card grid-item-1c-3r bg-accent" id="mews">
-                <a class="link-full" href="#"></a>
+                <!-- <a class="link-full" href="#"></a> -->
                 <p class="intro">Work - Mews</p>
                 <h2>Shaping the future of hospitality by reimagining hotel operations through design</h2>
                 <span class="tag light">Story coming soon</span>
             </div>
             <div class="card grid-item-1c-1r">
-                <a class="link-full" href="#"></a>
+                <a class="link-full" href="nespresso-virtual-shopping.html"></a>
                 <img class="img-full" src="img/video-preview.gif">
             </div>
             <div class="card grid-item-1c-3r">
@@ -131,25 +133,46 @@
 
             </div>
             <div class="card grid-item-1c-3r" id="richemont">
-                <a class="link-full" href="#"></a>
+                <!-- <a class="link-full" href="#"></a> -->
                 <p class="intro">Work - Richemont</p>
                 <h2>Led the Design of Richemont's Customer Care Platform and Multi-Brand Design System</h2>
                 <span class="tag dark">Story coming soon</span>
             </div>
             <div class="card grid-item-1c-3r" id="sqli">
-                <a class="link-full" href="#"></a>
+                <!-- <a class="link-full" href="#"></a> -->
                 <p class="intro">Work - SQLI Digital Experience</p>
                 <h2>Quadrupled design revenue while establishing partnerships with local Swiss and global brands</h2>
                 <span class="tag dark">Story coming soon</span>
             </div>
             <div class="card grid-item-2c-2r bg-accent">
                 <p class="intro">Awards and recognitions</p>
+                <div class="content">
+                    <ul class="list">
+                        <li>
+                            Nespresso, Best Digital Customer Experience 
+                            <span>Issued by International CX Awards · Jul 2021</span>
+                        </li>
+                        <li>
+                            Nespresso, Highly Commended
+                            <span>Issued by European Customer Centricity Awards · Jul 2021</span>
+                        </li>
+                        <li>
+                            Designflows Finalist
+                            <span>Issued by Bending Spoons · May 2019</span>
+                        </li>
+                        <li>
+                            Published among the "Best New Portfolio Sites"
+                            <span>Issued by Web Designer Depot · Dec 2015</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="page"></div>
     </div>
 
     <script src="js/cursor.js"></script>
+    <script src="js/core.js"></script>
+
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -164,39 +187,6 @@
         },
         });
     </script>
-
-    <!-- Page Loader -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll('.load-page'); // Select all links with the class 'load-page'
-            const contentDiv = document.querySelector('.page'); // Target the div with the class 'page'
-    
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault(); // Prevent the default link behavior
-    
-                    const page = this.getAttribute('href'); // Get the href attribute (URL of the page to load)
-    
-                    // Fetch and load the content into the .page div
-                    fetch(page)
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Network response was not ok: ' + response.statusText);
-                            }
-                            return response.text();
-                        })
-                        .then(html => {
-                            contentDiv.innerHTML = html; // Replace the content of the .page div
-                        })
-                        .catch(error => {
-                            console.error('Error loading the page:', error);
-                        });
-                });
-            });
-        });
-    </script>
-    
 
 </body>
 </html>
