@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Your website description here.">
+    <meta name="keywords" content="keywords, related, to, your, site">
+    <meta name="author" content="Your Name or Company Name">
+
+    <!-- Title -->
+    <title>Andrea Pilutti - User Experience and Product Design Leadership</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- GSAP (Minified for Performance) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
+
 <body class="page-transition">
+
+    <!-- Cursor -->
     <div id="cursor">
         <img id="standard" src="img/cursor.svg">
         <img id="link" src="img/pointer.svg">
@@ -20,21 +39,42 @@
     <div id="cursor-animation">
         <img src="img/hi-five.gif">
     </div>
-    <div class="container">
-        <div class="menu card">
-            <div class="brand">
-                <img src="img/andrea-pilutti.png" width="64" height="64">
-                <div>
-                    <strong>Andrea Pilutti</strong>
-                    <span>Design Director at Mews</span> 
-                </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="hideOverlay">
+        <a class="hideOverlay button light no-transition">Close video</a>
+        <div id="modal">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe 
+                id="vimeo-video" 
+                src="https://player.vimeo.com/video/842857931?badge=0&autopause=0&player_id=0&app_id=58479" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                title="Nespresso Virtual Shopping">
+              </iframe>
             </div>
-            <span class="text-large">User Experience<br/>and Product Design<br/>Leadership</span>
-            <div class="content">
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="menu">
+            <div class="card grow">
+                <div class="brand">
+                    <img src="img/andrea-pilutti.png" width="64" height="64">
+                    <div>
+                        <strong>Andrea Pilutti</strong>
+                        <span>Design Director at Mews</span> 
+                    </div>
+                </div>
+                <span class="text-large">User Experience<br/>and Product Design<br/>Leadership</span>
+            </div>
+            <div class="card no-fade">
                 <ul class="list">
-                    <li><a href="http://www.linkedin.com/">LinkedIn</a></li>
-                    <li><a href="#">ADPList</a></li>
-                    <li><a href="#">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/andrea-pilutti-head-of-product-design-ux-digital-experience-design-director"  class="no-transition">LinkedIn</a></li>
+                    <li><a href="https://adplist.org/mentors/andrea-pilutti" class="no-transition">ADPList</a></li>
+                    <li><a href="mailto:andrea.pilutti[at]me.com" class="no-transition">Email</a></li>
                 </ul>
                 <a class="button light" href="#">Let's talk</a>
             </div>
@@ -44,13 +84,13 @@
                 <p class="intro dark">About</p>
                 <div class="content">
                     <h1>Driven by a growth mindset, I am a curious and passionate design leader who loves to play at the intersection of people, business, and technology to create remarkable products and experiences.</h1>
-                    <a class="button light" href="#">Read more</a>
+                    <a class="button light" href="about.html">Read more</a>
                 </div>
             </div>
             <div class="card grid-item-1c-2r bg-accent">
                 <p class="intro">Experience</p>
                 <div class="gradient">
-                    <a class="button light" href="page.html">Read more</a>
+                    <a class="button light" href="experience.html">Read more</a>
                 </div>
                 <div class="content">
                     <ul class="list">
@@ -77,7 +117,7 @@
                 <span class="tag light">Story coming soon</span>
             </div>
             <div class="card grid-item-1c-1r">
-                <a class="link-full" href="nespresso-virtual-shopping.html"></a>
+                <a class="link-full no-transition showOverlay"></a>
                 <img class="img-full" src="img/video-preview.gif">
             </div>
             <div class="card grid-item-1c-3r">
@@ -97,7 +137,7 @@
                                 <p>
                                     I can easily recommend Andrea as one of the foremost Product Design Directors in Europe.  From a hiring perspective, Andrea has high-standards but in turn understands what it takes to hire and nurture a team of a-players. However, it is not really what I think that matters most here… The Designers we know who have worked for Andrea have always stated he is one of the best managers they have worked for and that they would love to work for him again. He's able to navigate large and complex businesses while remaining human to all throughout. He will always push his team... 
                                 </p>
-                                <a class="button dark" href="#">Read more</a>
+                                <a class="button dark no-transition" target="_blank" href="https://www.linkedin.com/in/andrea-pilutti-head-of-product-design-ux-digital-experience-design-director">Read more</a>
                             </div>
                             <div class="swiper-slide">
                                 <div class="author">
@@ -110,7 +150,7 @@
                                 <p>
                                     I had the pleasure of working closely with Andrea during our time at Nespresso, and I can confidently say that he is an exceptional leader and a true asset to any team. As the Head of Product Design and UX, Andrea's impact was undeniable, and I am thrilled to recommend him based on our shared experiences. Andrea's commitment to innovation is inspiring. His ability to think outside the box and bring fresh, creative ideas to the table was instrumental in driving theteam's success. Whether it was conceptualizing groundbreaking product designs or reimagining user experiences...
                                 </p>
-                                <a class="button dark" href="#">Read more</a>
+                                <a class="button dark no-transition" target="_blank" href="https://www.linkedin.com/in/andrea-pilutti-head-of-product-design-ux-digital-experience-design-director">Read more</a>
                             </div>
                             <div class="swiper-slide">
                                 <div class="author">
@@ -121,9 +161,9 @@
                                     </div>                           
                                 </div>
                                 <p>
-                                    Andrea is one of the best colleagues, managers and mentors that I have encountered during my professional experience. He stands out for his incredible ability to maintain balance, focus and solidity in the most different situations - not always easy - in which you can find a manager and leader. This encourages the creation of lasting, positive and strong relationships within and outside his teams, inspiring the people who work with him to always be better as a human being, first and foremost, and as professionals. His long experience as Creative "hands on", together with...
+                                    Andrea is one of the best colleagues, managers and mentors that I have encountered during my professional experience. He stands out for his incredible ability to maintain balance, focus and solidity in the most different situations - not always easy - in which you can find a manager and leader. This encourages the creation of lasting, positive and strong relationships within and outside his teams, inspiring the people who work with him to always be better as a human being, first and foremost, and as professionals. His long experience as Creative "hands on"...
                                 </p>
-                                <a class="button dark" href="#">Read more</a>
+                                <a class="button dark no-transition" target="_blank" href="https://www.linkedin.com/in/andrea-pilutti-head-of-product-design-ux-digital-experience-design-director">Read more</a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -170,23 +210,35 @@
         </div>
     </div>
 
-    <script src="js/cursor.js"></script>
-    <script src="js/core.js"></script>
+    <!-- Custom JS -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/core.js" defer></script>
 
+    <!-- Vimeo API -->
+    <script src="https://player.vimeo.com/api/player.js" defer></script>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Inline JS -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize Swiper
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+    
+            // Initialize the Vimeo Player
+            const iframe = document.getElementById('vimeo-video');
+            if (iframe) {
+                window.player = new Vimeo.Player(iframe); // Make player globally available
+            }
         });
     </script>
-
+    
 </body>
 </html>
