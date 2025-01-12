@@ -786,7 +786,7 @@ body.light .footer .card {
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(30, 50vw);
+    grid-template-rows: repeat(30, 45vw);
     grid-gap: 16px;
     transition: all 0.2s ease-in-out;
 }
