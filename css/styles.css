@@ -790,7 +790,7 @@ body.light .footer .card {
 .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(31, 40vw);
+    grid-template-rows: repeat(32, 40vw);
     grid-gap: 16px;
     transition: all 0.2s ease-in-out;
 }
@@ -802,7 +802,7 @@ body.light .footer .card {
 
 .grid-item-2c-4r {
     grid-column-end: span 1;
-    grid-row-end: span 4;
+    grid-row-end: span 5;
 }
 
 .grid-item-2c-4r {
