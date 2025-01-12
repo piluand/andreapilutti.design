@@ -458,8 +458,12 @@ div.intro p {
 /* List */
 
 ul.list {
-    margin: 0 0 2em 0;
+    margin: 0;
     padding: 0;
+}
+
+ul.list.margin-bottom {
+    margin-bottom: 2em;
 }
 
 ul.list li {
