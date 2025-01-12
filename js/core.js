@@ -1,5 +1,4 @@
 // ### PAGE TRANSITION ### //
-
 document.addEventListener("DOMContentLoaded", () => {
     const transitionContainer = document.querySelector(".page-transition");
 
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     links.forEach(link => {
         link.addEventListener("click", (e) => {
-            // Exclude links with class "no-transition"
             if (link.classList.contains("no-transition")) {
                 return; // Skip the transition logic
             }
@@ -23,11 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
             transitionContainer.classList.remove("fade-in");
             transitionContainer.classList.add("fade-out");
 
+            // Push state to history
+            history.pushState(null, "", url);
+
             // Wait for the fade-out transition to complete before navigating
             setTimeout(() => {
                 window.location.href = url;
             }, 500); // Match the CSS transition duration (500ms)
         });
+    });
+
+    // Handle back/forward browser navigation
+    window.addEventListener("popstate", () => {
+        transitionContainer.classList.remove("fade-in");
+        transitionContainer.classList.add("fade-out");
+
+        setTimeout(() => {
+            location.reload();
+        }, 500); // Match the CSS transition duration (500ms)
     });
 });
 

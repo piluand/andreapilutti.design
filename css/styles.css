@@ -212,6 +212,10 @@ img.img-full {
     opacity: 1;
 }
 
+.page-transition.fade-out {
+    opacity: 0;
+}
+
 /* Cursor */
 
 #cursor-andrea,
