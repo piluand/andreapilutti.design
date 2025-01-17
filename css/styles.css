@@ -802,7 +802,7 @@ body.light .footer .card {
 
 .grid-item-2c-4r {
     grid-column-end: span 1;
-    grid-row-end: span 5;
+    grid-row-end: span 4;
 }
 
 .grid-item-2c-2r {
