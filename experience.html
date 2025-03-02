@@ -16,8 +16,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Your website description here.">
-    <meta name="keywords" content="keywords, related, to, your, site">
+    <meta name="description" content="Andrea Pilutti - Design Director specializing in UX and Product Design leadership. 15+ years experience scaling design teams and driving digital transformation at Mews, Nespresso, and Richemont.">
+    <meta name="keywords" content="UX design, product design, design leadership, design director, Andrea Pilutti, Mews, Nespresso">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="Your Name or Company Name">
 
     <!-- Title -->
@@ -47,6 +48,29 @@
     <meta property="og:image" content="https://andreapilutti.design/img/og-image.jpg">
     <meta property="og:image:alt" content="Andrea Pilutti's portfolio featuring user experience and product design projects">
     <meta property="og:locale" content="en_US">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="img/cursor.svg" as="image">
+    <link rel="preload" href="img/pointer.svg" as="image">
+
+    <!-- Add structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Andrea Pilutti",
+        "jobTitle": "Design Director",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Mews"
+        },
+        "url": "https://andreapilutti.design"
+      }
+    }
+    </script>
 </head>
 
 <body class="page-transition light">
@@ -192,8 +216,12 @@
 
     </div>
 
-    <script src="js/cursor.js"></script>
-    <script src="js/core.js"></script>
+    <!-- Move scripts to end of body -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-RNKJQC94BS" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/core.js" defer></script>
 
 </body>
 </html>

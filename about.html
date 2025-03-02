@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNKJQC94BS"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RNKJQC94BS');
-    </script>
-
+    <!-- Move analytics to end of body for better page load performance -->
+    
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Your website description here.">
-    <meta name="keywords" content="keywords, related, to, your, site">
-    <meta name="author" content="Your Name or Company Name">
-
+    <meta name="description" content="Andrea Pilutti: Design Director specializing in UX leadership, product design, and digital transformation. Leading design teams at Mews, with experience at Nespresso and Richemont.">
+    <meta name="keywords" content="UX design, product design, design leadership, Andrea Pilutti, design director, Mews">
+    
     <!-- Title -->
-    <title>Andrea Pilutti - User Experience and Product Design Leadership</title>
+    <title>Andrea Pilutti | Design Director - UX & Product Design Leadership</title>
 
-    <!-- Favicon -->
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="img/cursor.svg" as="image">
+    
+    <!-- Favicon - add more sizes and formats -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -36,34 +31,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 
-    <!-- OG Metadata -->
-    <meta property="og:title" content="Andrea Pilutti - User Experience and Product Design Leadership">
-    <meta property="og:site_name" content="Andrea Pilutti's Portfolio: User Experience and Product Design Leadership">
-    <meta property="og:url" content="https://andreapilutti.design/">
-    <meta property="og:description" content="Explore the portfolio of Andrea Pilutti, a Design Director specializing in User Experience, Product Design, and leadership in crafting seamless digital solutions.">
+    <!-- Enhanced OG Metadata -->
+    <meta property="og:title" content="Andrea Pilutti | Design Director - UX & Product Design Leadership">
+    <meta property="og:site_name" content="Andrea Pilutti's Portfolio">
+    <meta property="og:url" content="https://andreapilutti.design/about">
+    <meta property="og:description" content="Design Director specializing in UX leadership, product design, and digital transformation. Leading design teams at Mews, with experience at Nespresso and Richemont.">
     <meta property="og:type" content="profile">
     <meta property="profile:first_name" content="Andrea">
     <meta property="profile:last_name" content="Pilutti">
     <meta property="og:image" content="https://andreapilutti.design/img/og-image.jpg">
     <meta property="og:image:alt" content="Andrea Pilutti's portfolio featuring user experience and product design projects">
     <meta property="og:locale" content="en_US">
+
+    <!-- Add Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Andrea Pilutti | Design Director - UX & Product Design Leadership">
+    <meta name="twitter:description" content="Design Director specializing in UX leadership, product design, and digital transformation.">
+    <meta name="twitter:image" content="https://andreapilutti.design/img/og-image.jpg">
 </head>
 
 <body class="page-transition light">
-
-    <!-- Cursor -->
-    <div id="cursor">
-        <img id="standard" src="img/cursor.svg">
-        <img id="link" src="img/pointer.svg">
-    </div>
-    <div id="cursor-andrea">
-        <img src="img/cursor-andrea.svg">
-    </div>
-    <div id="cursor-animation">
-        <img src="img/hi-five.gif">
-    </div>
-
-    <div class="container">
+    <!-- Add semantic main tag -->
+    <main class="container">
+        <!-- Cursor -->
+        <div id="cursor">
+            <img id="standard" src="img/cursor.svg">
+            <img id="link" src="img/pointer.svg">
+        </div>
+        <div id="cursor-andrea">
+            <img src="img/cursor-andrea.svg">
+        </div>
+        <div id="cursor-animation">
+            <img src="img/hi-five.gif">
+        </div>
 
         <div class="menu">
             <div class="card grow">
@@ -129,12 +129,24 @@
                 <a target="_blank" class="button dark dynamic no-transition email-protected" data-user="hello" data-domain="andreapilutti.design">Let's talk!</a>
             </div>
         </div>
+    </main>
 
+    <!-- Move scripts to end of body -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNKJQC94BS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RNKJQC94BS');
+    </script>
 
-    </div>
-
-    <script src="js/cursor.js"></script>
-    <script src="js/core.js"></script>
-
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom scripts -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/core.js" defer></script>
 </body>
 </html>
