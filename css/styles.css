@@ -141,7 +141,7 @@ img.img-full {
     font-size: 1.3em;
     line-height: 1.2em;
     font-family: 'Tiempos Fine';
-    color: #001EFF;
+    color: #3B37F2;
 }
 
 .accordion .panel a > span:nth-child(2) {
@@ -341,7 +341,7 @@ h2 {
     font-size: 1.5em;
     margin-top: 2em;
     margin-bottom: 0.9em;
-    color: #001EFF;
+    color: #3B37F2;
 }
 
 p {
@@ -412,7 +412,7 @@ div.intro p {
 }
 
 .bg-accent {
-    background-color: #001EFF;
+    background-color: #3B37F2;
     color: #ffffff;
 }
 
@@ -723,7 +723,7 @@ body.light .footer .card {
     bottom: 0;
     left: 0;
     background-image: url(../img/arrow-left-light.svg);
-    background-color: #001EFF;
+    background-color: #3B37F2;
     border-radius: 4em;
     background-repeat: no-repeat;
     background-position: right center;
