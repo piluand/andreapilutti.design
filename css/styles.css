@@ -451,7 +451,7 @@ div.intro p {
     padding: 24px;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(180deg, rgba(0, 30, 255, 0) 0%, rgba(0, 30, 255, 0.95) 50%);
+    background: linear-gradient(180deg, #3B37F200 0%, #3B37F2f2 50%);
     pointer-events: none;
 }
 
